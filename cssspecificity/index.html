@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CSS Specificity</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <h1>CSS Specificity</h1>
+        </header>
+        <article class="main">
+            <p>Specificity หรือการระบุอย่างเฉพาะเจาะจงในการจัดรูปแบบ ตกแต่ง element ของใน HTML เพื่อให้แสดงผลหรือแสดงรูปแบบออกมาตามที่ต้องการ ผ่านการเขียน CSS ไม่ว่าจะเป็นการกำหนด style ทั้ง 3 รูปแบบ คือ External Style Sheet, Internal Style Sheet และ Inline Styles </p>
+            <p>ปกติแล้วการใช้ Selector เพื่อเป็นการกำหนดค่าเพื่อใช้ในการแสดงผลของแต่ละ element เป็นสิ่งที่สำคัญและควรตระหนักถึง เพื่อการตอบสนองการใช้งานที่ดี ควรจัดลำดับความสำคัญในการใช้ CSS Selector ในการกำหนดการแสดงผล ซึ่งโดยปกติลำดับในการเขียนโค้ดจาก บน-ล่าง ก็ส่งผลต่อการใช้งาน CSS Selector ในการแสดงผลที่แตกต่างกัน แต่ความพิเศษกว่านั้นคือ CSS Selector ที่เลือกใช้แต่ละตัวจะมีค่าพลังของตัวเองที่แตกต่างกัน ซึ่งสามารถนำความสามารถเหล่านี้มาใช้ช่วยในการจัดลำดับความสำคัญในการใช้งาน CSS Selector ได้อีก</p>
+            <div class="selector-power">
+                <img src="image/calculating-selector.png" alt="CSS Selector Power">
+                <p>รูปภาพแสดงค่าพลัง (ค่า specificity) ของ CSS Selectorbr</p>
+            </div>
+            <p>จากรูปจะพบว่าแบ่ง Selector ออกเป็น 3 กลุ่ม ที่มีค่าพลังแตกต่างกัน ก็คือหากกำหนด style โดยใช้ Selector ที่เป็น ID จะส่งผลให้ค่าพลังเท่ากับ 100 หรือถ้าใช้ Selector ที่เป็น Class จะส่งผลให้ค่าพลังเท่ากับ 10 และหากใช้ Selector ที่เป็น element tag ทั้งหลาย จะส่งผลให้มีค่าพลังเท่ากับ 1 นั่นเอง<br></p>
+            <div class="flex-container">
+                <h3>จุดสังเกตที่สำคัญ</h3>
+                <div class="external-style-sheet">
+                    <p>1. กรณีแสดงผลของ element จาก External Style Sheet ที่ Selector ตัวเดียวกัน แต่กำหนดคุณสมบัติภายในต่างกัน</p>
+                    <div class="externalCSS">
+                        <img src="image/Screen%20Shot%202562-02-04%20at%2015.53.40.png" alt="image1">
+                        <img src="image/Screen%20Shot%202562-02-04%20at%2015.53.17.png" alt="image1">
+                        <p>รูปภาพแสดงการกำหนดค่าสีพื้นหลังของ external css ทั้ง 2 ไฟล์ที่แตกต่างกัน</p>
+                        <br>
+                        <img src="image/Screen%20Shot%202562-02-04%20at%2015.54.32.png" alt="image1">
+                        <p>รูปภาพแสดงการเรียกใช้งาน external css ทั้ง 2 ไฟล์</p>
+                        <br>
+                        <img src="image/Screen%20Shot%202562-02-04%20at%2015.58.44.png" alt="image1">
+                        <p>รูปภาพแสดงผลการทำงานจาก external css อันล่างสุด ซึ่งจะแสดงผลให้พื้นหลังสีเทา</p>
+                        <br>
+                    </div>
+                    <p>จะสังเกตได้ว่า เมื่อมีการเรียกใช้ผ่านการลิ้งไปยัง specificity-style.css และ specificity-style02.css ที่มีการกำหนดคุณสมบัติใน selector ตัวเดียวกัน จะแสดงรูปแบบของ specificity-style02.css เพราะ HTML จะดูจากการเรียกใช้ไฟล์ .css ล่าสุด </p>
+                </div>
+
+                <div class="internal-style-sheet">
+                    <p>2. กรณีแสดงผลของ element จาก Internal Style Sheet ที่ Selector ตัวเดียวกัน แต่กำหนดคุณสมบัติภายในต่างกัน</p>
+                    <div class="internal-style-sheet-list">
+                        <p>2.1 เมื่อมีการใช้ selector ตัวเดียวกัน ในการกำหนด style บริเวณ head tag จะพบว่า HTML จะแสดงผลออกมาตามการกำหนด style อันล่างสุด</p>
+                        <div class="internalCSS-2-1">
+                            <img src="image/Screen%20Shot%202562-02-04%20at%2015.44.29.png" alt="image2-1">
+                            <p>รูปภาพแสดงการกำหนดค่าสีพื้นหลังใน internal css 2 ครั้ง แต่ให้ผลที่แสดงออกมาต่างกัน</p>
+                            <br>
+                            <img src="image/Screen%20Shot%202562-02-04%20at%2015.45.08.png" alt="image2-1">
+                            <p>รูปภาพแสดงผลการทำงานจาก internal css อันล่างสุด ซึ่งจะได้พื้นหลังสีส้ม</p>
+                            <br>
+                        </div>
+                        <p>2.2 เมื่อมีการใช้ selector ตัวเดียวกัน ในการกำหนด style และพบว่ามีการเขียนลิ้งไปยังไฟล์ .css บริเวณ head tag จะพบว่า HTML จะแสดงผลออกมา ถ้า internal style เป็นอันล่างสุด จึงแสดงค่าที่กำหนดใน internal style แต่หากมีการกำหนด external style sheet เป็นอันล่างสุด ก็จะแสดงผลออกมาตาม external style sheet</p>
+                        <div class="internalCSS-2-1">
+                            <img src="image/Screen%20Shot%202562-02-04%20at%2014.53.33%202.jpeg" alt="image2-2">
+                            <p>รูปภาพแสดงการกำหนดค่าสีพื้นหลังใน external css และ internal css</p>
+                            <br>
+                            <img src="image/Screen%20Shot%202562-02-04%20at%2015.32.44.png" alt="image2-2">
+                            <p>รูปภาพแสดงผลการทำงานจาก internal css ซึ่งจะได้พื้นหลังสีม่วง
+                                <br>(กรณี internal css เป็นไฟล์ล่างสุด)</p>
+                            <br>
+                        </div>
+                        <div class="internalCSS-2-1">
+                            <img src="image/Screen%20Shot%202562-02-04%20at%2016.12.39.png" alt="image2-2">
+                            <p>รูปภาพแสดงการกำหนดค่าสีพื้นหลังใน external css และ internal css</p>
+                            <br>
+                            <img src="image/Screen%20Shot%202562-02-04%20at%2016.13.01.png" alt="image2-2">
+                            <p>รูปภาพแสดงผลการทำงานจาก internal css ซึ่งจะได้พื้นหลังสีเทา
+                                <br>(กรณี external css เป็นไฟล์ล่างสุด)</p>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="inline-styles">
+                    <p>3. กรณีแสดงผลของ element จากการกำหนด Inline Style ใน tag ที่ต้องการ</p>
+                    <div class="inline-styles-list">
+                        <p>3.1 หากมีการกำหนดค่าใน selector ตัวเดียวกันกับ external style sheet แต่เนื่องจากการเขียนลิ้งไปยัง external style sheet ต้องกำหนดที่ head tag จึงทำให้ HTML แสดงผลออกมาตามที่ถูกกำหนดที่ inline style</p>
+
+                        <p>3.2 หากมีการกำหนดค่าใน selector ตัวเดียวกันกับ internal style sheet ซึ่งต้องกำหนดที่ head tag เช่นเดียวกับ external style sheet จึงทำให้ HTML แสดงผลออกมาตามที่ถูกกำหนดที่ inline style</p>
+                        <div class="inline-3-2">
+                            <img src="image/Screen%20Shot%202562-02-04%20at%2014.53.33.jpeg" alt="image3-2">
+                            <p>รูปภาพแสดงการกำหนดค่าสีพื้นหลังใน internal css และ inline</p>
+                            <br>
+                            <img src="image/Screen%20Shot%202562-02-04%20at%2015.18.47.png" alt="image3-2">
+                            <p>รูปภาพแสดงผลการทำงานจาก inline style ซึ่งจะได้พื้นหลังสีเขียว</p>
+                            <br>
+                        </div>
+                        <p>3.3 หากมีการกำหนดค่าใน selector ตัวเดียวกันกับใน external style sheet และ internal style sheet ที่ถูกกำหนดไว้ใน head tag ส่งผลให้ HTML แสดงผลออกมาตามที่ถูกกำหนดที่ inline style</p>
+                        <div class="inline-3-3">
+                            <img src="image/Screen%20Shot%202562-02-04%20at%2014.50.40.png" alt="image3-3">
+                            <p>รูปภาพแสดงการกำหนดค่าสีพื้นหลังใน external css</p>
+                            <br>
+                            <img src="image/Screen%20Shot%202562-02-04%20at%2014.53.33.png" alt="image3-3">
+                            <p>รูปภาพแสดงการกำหนดค่าสีพื้นหลังใน internal css และ inline โดยมีการเชื่อม external css</p>
+                            <br>
+                            <img src="image/Screen%20Shot%202562-02-04%20at%2015.18.47.png" alt="image3-3">
+                            <p>รูปภาพแสดงผลการทำงานจาก inline style ซึ่งจะได้พื้นหลังสีเขียว</p>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="power-of-point">จุดสังเกตเพิ่มเติม</h3>
+                <div class="specificity-cal">
+                    <p>จากที่กล่าวไปในข้างต้นว่า ในแต่ละ Selector ที่เลือกใช้งานจะมีค่าพลัง (ค่า specificity) ที่แตกต่างกันไปทำให้สามารถนำมาใช้ในการออกแบบ CSS ที่มีประสิทธิภาพในการเรียกใช้งาน Selector ที่มีลำดับความสำคัญที่แตกต่างกันได้ สามารถกำหนดค่าทับซ้อนกันได้ </p>
+                    <div class="example">
+                        <h4>ตัวอย่างที่ 1</h4>
+                        <br>
+                        <img src="image/Screen%20Shot%202562-02-04%20at%2019.19.12.png" alt="imageEX-1">
+                        <p>รูปภาพแสดงลำดับโค้ดของ tag p </p>
+                        <br>
+                        <img src="image/Screen%20Shot%202562-02-04%20at%2018.18.40.png" alt="imageEX-1">
+                        <p>รูปภาพแสดงผลการกำหนดค่าผ่าน p และเจาะจงมากขึ้นด้วยการใช้ div p</p>
+                        <br>
+                        <img src="image/Screen%20Shot%202562-02-04%20at%2018.36.23.png" alt="imageEX-1">
+                        <p>รูปภาพแสดงผลการกำหนดค่าผ่าน div p ที่มีความเจาะจงกว่า และตามด้วย p </p>
+                        <br>
+                        <img src="image/Screen%20Shot%202562-02-04%20at%2018.18.03.png" alt="imageEX-1">
+                        <p>รูปภาพแสดงผลที่สีของข้อความ</p>
+                        <br>
+                        <p class="summary-ex-1">จากการคำนวณค่าพลัง (ค่า specificity) ของ element จากรูปภาพด้านบนอันแรก p {...} จะมีค่าพลังเท่ากับ 1 แต่ในถ้าคำนวณจาก div p {...} จะพบว่ามีค่าพลังคือ 1 + 1 = 2 จึงมีค่าพลังมากกว่า จึงทำให้ HTML แสดงผลสีของข้อความเป็นสีเหลืองดังรูปภาพข้างบน และถึงแม้จะมีสลับลำดับการกำหนดค่าเป็น div p {...} ก่อน แล้วตามด้วย p {...} การแสดงผลจะมีค่าเหมือนเดิมเพราะอย่างไรก็ตาม div p {...} มีค่าพลังมากกว่า</p>
+                        
+                        <h4>ตัวอย่างที่ 2</h4>
+                        <br>
+                        <img src="image/Screen%20Shot%202562-02-04%20at%2019.18.47.png" alt="imageEX-2">
+                        <p>รูปภาพแสดงการกำหนดค่าโดยใช้ class เป็น selector </p>
+                        <br>
+                        <img src="image/Screen%20Shot%202562-02-04%20at%2019.24.06.png" alt="imageEX-2">
+                        <p>รูปภาพแสดงสีของข้อความ </p>
+                        <br>
+                        <p class="summary-ex-2">จากการคำนวณค่าพลัง (ค่า specificity) ของ element จากรูปภาพด้านบน มีการใช้ .definition {...} ซึ่งเป็น class จะมีค่าพลังเท่ากับ 10 ในขณะที่ div p {...} และ p {...} มีค่าพลังเท่ากับ 2 และ 1 ตามลำดับ ดังนั้นการกำหนดค่าโดยใช้ .definition {...} จึงมีค่าพลังมากกว่า ทำให้ HTML แสดงผลให้สีข้อความเป็นสีดำดังภาพ</p>
+                        
+                        <h4>ตัวอย่างที่ 3</h4>
+                        <br>
+                        <img src="image/Screen%20Shot%202562-02-04%20at%2019.38.44.png" alt="imageEX-3">
+                        <br>
+                        <img src="image/Screen%20Shot%202562-02-04%20at%2019.39.00.png" alt="imageEX-3">
+                        <p>รูปภาพแสดงการกำหนดค่าของชื่อเจ้าของบทความโดยใช้ ID เป็น selector </p>
+                        <br>
+                        <p class="summary-ex-3">จากการคำนวณค่าพลัง (ค่า specificity) ของ element จากรูปภาพด้านบน มีการใช้ #resource {...} ซึ่งเป็น ID จะมีค่าพลังเท่ากับ 100 จึงมีค่าพลังมากทำให้ HTML แสดงผลออกมีสีข้อความเป็นสีแดง</p>
+                        <br>
+                        <img src="image/Screen%20Shot%202562-02-04%20at%2019.38.14.png" alt="imageEX-3">
+                        <p>รูปภาพแสดงสีของข้อความ </p>
+                        <br>
+                        <p class="summary-ex-3">แต่เมื่อมีการกำหนดค่าโดยการใช้ inlne style บริเวณชื่อของเจ้าของบทความ เนื่องจากการกำหนดค่าด้วย inline style มีค่าเท่ากับ 1000 ซึ่งกว่าทำให้ สีของข้อความที่เป็นชื่อเจ้าของบทความมีสีน้ำตาลตามการกำหนดด้วย inline style </p>
+                    </div>
+                </div>
+             
+                <h3 class="sources">แหล่งอ้างอิง</h3>
+                <div class="source">
+                    <ul>
+                        <li>
+                            <a href="https://www.designil.com/css-specificity-and-hack.html">CSS Specificity พื้นฐานการเขียน CSS ที่คนส่วนใหญ่ไม่รู้ & เทคนิค Hack <br>https://www.designil.com/css-specificity-and-hack.html [1 กุมภาพันธ์ 2562]</a>
+                        </li>
+                        <li>
+                            <a href="https://rabbitinblack.com/2011/10/css-style-id-class/">CSS : ลำดับความสำคัญของ style ใน CSS <br>https://rabbitinblack.com/2011/10/css-style-id-class/ [1 กุมภาพันธ์ 2562]</a>
+                        </li>
+                        <li>
+                            <a href="https://medium.com/@thanuphon18/css-specificity-เรื่องง่ายๆ-ที่หลายคนไม่เคยรู้-f23a0bf5ae87">CSS Specificity เรื่องง่ายๆ ที่หลายคนไม่เคยรู้ <br>https://medium.com/@thanuphon18/css-specificity-เรื่องง่ายๆ-ที่หลายคนไม่เคยรู้-f23a0bf5ae87 <br>[1 กุมภาพันธ์ 2562]</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+        <aside class="aside aside-1"></aside>
+        <aside class="aside aside-2"></aside>
+        <footer class="footer">
+            <p>Create by Thikamporn Simud</p>
+        </footer>
+    </div>
+</body>
+
+</html>

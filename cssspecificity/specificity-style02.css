@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Chewy|Kaushan+Script|PT+Sans|Gothic+A1|Kanit|Mali|Prompt|Sarabun');
+/*
+font-family: 'Chewy', cursive;
+font-family: 'Kaushan Script', cursive;
+font-family: 'PT Sans', sans-serif;
+font-family: 'Gothic A1', sans-serif;
+font-family: 'Kanit', sans-serif;
+font-family: 'Prompt', sans-serif;
+font-family: 'Sarabun', sans-serif;
+font-family: 'Mali', cursive;
+
+*/
+body {
+    font-family: 'Kanit', sans-serif;
+    color: black;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    margin: 100px;
+}
+
+h1 {
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    font-family: 'Mali', cursive;
+    font-size: 4em;
+    margin: 0 .25em;
+}
+
+body {
+    background-color: #B3B6B7; /* grey */
+}

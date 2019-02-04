@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css?family=Chewy|Kaushan+Script|PT+Sans|Gothic+A1|Kanit|Mali|Prompt|Sarabun');
+/*
+font-family: 'Chewy', cursive;
+font-family: 'Kaushan Script', cursive;
+font-family: 'PT Sans', sans-serif;
+font-family: 'Gothic A1', sans-serif;
+font-family: 'Kanit', sans-serif;
+font-family: 'Prompt', sans-serif;
+font-family: 'Sarabun', sans-serif;
+font-family: 'Mali', cursive;
+
+*/
+body {
+    padding: 2em;
+    background-color: #212F3D;
+}
+.wrapper {
+    font: 1em 'Prompt', sans-serif;
+    color: #fff;
+    display: flex;  
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: center;
+    background: url(image/falling-green-leaves-png-4.png);
+    background-repeat: no-repeat;
+    animation: leaves 30s linear infinite;
+}
+
+.wrapper:before {
+    content: '';
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* animation of leaves falled */
+@keyframes leaves {
+    0%
+    {
+        background-position: 0% 0%;
+    }
+    100%
+    {
+        background-position: 20% 100%;
+    }
+}
+
+.wrapper > * {
+    line-height: 1.5em;
+    padding: 10px;
+    flex: 1 100%;
+}
+
+.header {
+    font: 2.5em  'Chewy', cursive;
+    color: #fff;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    letter-spacing: 4px;
+    animation: text 3s infinite;
+}
+
+@keyframes text {
+    0%{
+        letter-spacing: 2px;
+    }
+    30%{
+        letter-spacing: 15px;
+    }
+    75%{
+        letter-spacing: 5px;
+    }
+    95%{
+        letter-spacing: 1px;
+    }
+}
+
+flex-container {
+    font-size: 0.9em;
+}
+.external-style-sheet {
+    color: black;
+    margin: 15px 0 15px 0;
+    background: linear-gradient(#A9CCE3, #7FB3D5, #5499C7);
+    border-radius: 10px;
+    padding: 20px;
+}
+.internal-style-sheet {
+    color: black;
+    margin: 15px 0 15px 0;
+    background: linear-gradient(#A9CCE3, #7FB3D5, #5499C7);
+    border-radius: 10px;
+    padding: 20px;
+    
+}
+
+.inline-styles{
+    color: black;
+    margin: 15px 0 15px 0;
+    background: linear-gradient(#A9CCE3, #7FB3D5, #5499C7);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.internal-style-sheet-list p {
+    text-indent: 10%;
+    padding: 0 30px 30px 30px;
+}
+
+.inline-styles-list p{
+    text-indent: 10%;
+    padding: 0 30px 30px 30px;
+}
+
+.inline-3-3 img{
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.inline-3-3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.inline-3-3 p {
+    font-size: 0.9em;
+    text-align: center;
+    text-indent: 0%;
+    padding: 0px;
+    margin: 10px 0 10px 0;
+}
+
+.inline-3-2 img{
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.inline-3-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.inline-3-2 p{
+    font-size: 0.9em;
+    text-align: center;
+    text-indent: 0%;
+    padding: 0px;
+    margin: 10px 0 10px 0;
+}
+
+.internalCSS-2-2 img{
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.internalCSS-2-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.internalCSS-2-2 p{
+    font-size: 0.9em;
+    text-align: center;
+    text-indent: 0%;
+    padding: 0px;
+    margin: 10px 0 10px 0;
+}
+
+.internalCSS-2-1 img{
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.internalCSS-2-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.internalCSS-2-1 p{
+    font-size: 0.9em;
+    text-align: center;
+    text-indent: 0%;
+    padding: 0px;
+    margin: 10px 0 10px 0;
+}
+
+.externalCSS img{
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.externalCSS {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.externalCSS p{
+    font-size: 0.9em;
+    text-align: center;
+    text-indent: 0%;
+    padding: 0px;
+    margin: 10px 0 10px 0;
+}
+
+.example img{
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.example {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.example p{
+    font-size: 0.9em;
+    text-align: center;
+    text-indent: 0%;
+    padding: 0px;
+    margin: 10px 0 10px 0;
+}
+
+
+.footer {
+    color: rgb(86, 101, 115);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.main {
+    font-size: 1.1em;
+    font-weight: normal;
+    text-indent: 5%;
+    text-align: justify;
+}
+
+div.selector-power {
+    text-indent: 0%;
+    text-align: center;
+}
+
+.selector-power p {
+    font-size: 0.9em;
+}
+
+.main h3 {
+    padding: 10px 0 10px 0;
+    background: #17202A;
+}
+
+h3.power-of-point {
+    padding: 10px 0 10px 0;
+    background: #6C3483;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.flex-container > * {
+    flex: 1 100%;
+}
+
+h3.sources {
+    padding: 10px 0 10px 0;
+    background: #F1C40F;
+}
+
+.source ul li a:link{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;   
+}
+
+a {
+    text-indent: 0%;
+    font-size: 0.9em;
+    text-align: left;
+    text-decoration: none;
+    color: #F1C40F;
+}
+
+.specificity-cal {
+    color: black;
+    margin: 15px 0 15px 0;
+    background: linear-gradient(#D2B4DE, #BB8FCE, #A569BD);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+p.summary-ex-1 {
+    text-align: justify;
+    text-indent: 5%;
+
+}
+
+p.summary-ex-2 {
+    text-align: justify;
+    text-indent: 5%;
+}
+
+p.summary-ex-3 {
+    text-align: justify;
+    text-indent: 5%;
+}
+
+.example h4 {
+    text-align: left;
+    text-indent: 0%;
+    text-decoration: underline;
+}
+
+@media all and (min-width: 600px) {
+    .aside { flex: 1 0 0; } 
+}
+
+@media all and (min-width: 800px) {
+    .main    { flex: 3 0px; }
+    .aside-1 { order: 1; } 
+    .main    { order: 2; }
+    .aside-2 { order: 3; }
+    .footer  { order: 4; }
+}
