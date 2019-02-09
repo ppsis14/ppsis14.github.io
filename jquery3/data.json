@@ -1,0 +1,146 @@
+[
+    {
+        "brand": "Honda",
+        "model": "Wave 110i 2019",
+        "price": "36,500",
+        "engine": "109.17 cc.",
+        "type": "Family-Standard",
+        "gear": "Normal"
+    },
+    {
+        "brand": "Honda",
+        "model": "CRF 250L 2019",
+        "price": "134,600",
+        "engine": "249.60 cc.",
+        "type": "Motocross",
+        "gear": "Normal"
+    },
+    {
+        "brand": "Honda",
+        "model": "Super Cub Standard 2016",
+        "price": "42,300",
+        "engine": "109.10 cc.",
+        "type": "Family-Standard",
+        "gear": "Normal"
+    },
+    {
+        "brand": "Honda",
+        "model": "Scoopy i Active Boy 2014 Wave 110i 2019",
+        "price": "46,000",
+        "engine": "108.00 cc.",
+        "type": "Family-Scooter",
+        "gear": "Auto"
+    },
+    {
+        "brand": "Honda",
+        "model": "Click i 125i 2015",
+        "price": "49,500",
+        "engine": "124.88 cc.",
+        "type": "Family-Scooter",
+        "gear": "Auto"
+    },
+    {
+        "brand": "Honda",
+        "model": "Click i 125i 2016",
+        "price": "49,500",
+        "engine": "124.88 cc.",
+        "type": "Family-Sport",
+        "gear": "Auto"
+    },
+    {
+        "brand": "Honda",
+        "model": "Moove",
+        "price": "51,400",
+        "engine": "108.20 cc.",
+        "type": "Family-Scooter",
+        "gear": "Auto"
+    },
+    {
+        "brand": "Honda",
+        "model": "Wave 125i 2014",
+        "price": "53,000",
+        "engine": "124.80 cc.",
+        "type": "Family-Standard",
+        "gear": "Normal"
+    },
+    {
+        "brand": "Yamaha",
+        "model": "YZF-R3 MY2018",
+        "price": "196,000",
+        "engine": "1321.00 cc.",
+        "type": "Sport Bike",
+        "gear": "Normal"
+    },
+    {
+        "brand": "Yamaha",
+        "model": "Freego 125",
+        "price": "50,900",
+        "engine": "125.00 cc.",
+        "type": "Family-Scooter",
+        "gear": "Auto"
+    },
+    {
+        "brand": "Yamaha",
+        "model": "Fino 125 Standard MY18",
+        "price": "46,000",
+        "engine": "125.00 cc.",
+        "type": "Family-Scooter",
+        "gear": "Auto"
+    },
+    {
+        "brand": "Yamaha",
+        "model": "Grand Filano Hybrid ABS",
+        "price": "62,000 ",
+        "engine": "125.00 cc.",
+        "type": "Family-Scooter",
+        "gear": "Auto"
+    },
+    {
+        "brand": "Yamaha",
+        "model": "FINN standard",
+        "price": "39,900",
+        "engine": "114.00 cc.",
+        "type": "Family-Standard",
+        "gear": "Normal"
+    },
+    {
+        "brand": "Yamaha",
+        "model": "Jupiter RC 115i/GP Edition",
+        "price": "48,000",
+        "engine": "114.00 cc.",
+        "type": "Family-Standard",
+        "gear": "Normal"
+    },
+    {
+        "brand": "Suzuki",
+        "model": "GSX-R 1000R ABS",
+        "price": "809,000",
+        "engine": "999.00 cc.",
+        "type": "Sport Bigbike",
+        "gear": "Normal (Constant Mesh)"
+    },
+    {
+        "brand": "Suzuki",
+        "model": "Raider R150",
+        "price": "67,900",
+        "engine": "147.00 cc.",
+        "type": "Family-Sport",
+        "gear": "Normal"
+    },
+    {
+        "brand": "Suzuki",
+        "model": "Smash 110 FW110-P",
+        "price": "32,900",
+        "engine": "113.00 cc.",
+        "type": "Family-Standard",
+        "gear": "Normal"
+    },
+    {
+        "brand": "Suzuki",
+        "model": "Shogun 125 FL125FSD-P",
+        "price": "49,900",
+        "engine": "124.00 cc.",
+        "type": "Family-Sport",
+        "gear": "Normal"
+    }
+]

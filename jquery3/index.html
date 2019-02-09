@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Motocycle Information</title>
+    <link rel="stylesheet" href="bootstrap-4.2.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <h1 class="header">Motocycle Information</h1><br>
+            </div>
+        </header>
+        <article class="main">
+            <div class="container">
+                <div class="row">
+                    <div class="container" id="normal-search-box">
+                        <div>
+                            <h5>Nomal Search Mode</h5>
+                            <br>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="input-text" placeholder="Fill some text for searching">
+                            <div class="input-group-append">
+                                <button class="btn btn-secondary" type="button" id="search-btn">Search</button>
+                            </div>
+                        </div>
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-secondary active">
+                                  <input type="radio" name="options" id="option1" autocomplete="off" checked> Normal Search Mode
+                                </label>
+                                <label class="btn btn-secondary">
+                                  <input type="radio" name="options" id="nm-option2" autocomplete="off"> Advance Search Mode
+                                </label>
+                        </div>
+                    </div>
+                    <div class="container" id="adv-search-box">
+                        <div>
+                            <h5>Advance Search Mode</h5>
+                            <br>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <label class="input-group-text" for="inputGroupSelect01">Brand</label>
+                                        </div>
+                                        <select class="custom-select" id="inputBrand">
+                                            <option selected>Choose...</option>
+                                            <option value="1">Honda</option>
+                                            <option value="2">Yamaha</option>
+                                            <option value="3">Suzuki</option>
+                                        </select>
+                                    </div>
+                            </div>
+                            <div class="col-4">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <label class="input-group-text" for="inputGroupSelect01">Type</label>
+                                        </div>
+                                        <select class="custom-select" id="inputType">
+                                            <option selected>Choose...</option>
+                                            <option value="1">Family-Scooter</option>
+                                            <option value="2">Family-Sport</option>
+                                            <option value="3">Family-Standard</option>
+                                            <option value="4">Motocross</option>
+                                            <option value="5">Sport Bike</option>
+                                            <option value="6">Sport Bigbike</option>
+                                    </select>
+                                    </div>
+                            </div>
+                            <div class="col-3">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <label class="input-group-text" for="inputGroupSelect01">Gear System</label>
+                                        </div>
+                                        <select class="custom-select" id="inputGear">
+                                            <option selected>Choose...</option>
+                                            <option value="1">Normal</option>
+                                            <option value="2">Auto</option>
+                                        </select>
+                                    </div>
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn-warning" id="adv-search-btn">Search</button>
+                            </div>
+            
+                        </div>
+                        <br>
+    
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-secondary">
+                                  <input type="radio" name="options" id="adv-option1" autocomplete="off" checked> Normal Search Mode
+                                </label>
+                                <label class="btn btn-secondary active">
+                                  <input type="radio" name="options" id="adv-option2" autocomplete="off"> Advance Search Mode
+                                </label>
+                        </div>
+                    </div>
+                    <table class="table table-md table-bordered table-hover table-dark" id="table">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Brand</th>
+                                    <th>Model</th>
+                                    <th>Price (Baht)</th>
+                                    <th>Engine (cc.)</th>
+                                    <th>Type</th>
+                                    <th>Gear System</th>
+                                </tr>
+                            </thead>
+                            <tbody class="tbody-light" id="table-body">
+                            </tbody>   
+                    </table>
+                </div>
+            </div>
+        </article>
+        <footer class="footer">
+            <p>ขอขอบคุณข้อมูลจาก <a class="link" href="https://www.checkraka.com">https://www.checkraka.com</a></p>
+            <br>
+            <p>Create By Thikamporn Simud</p>
+        </footer>
+      </div>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="myscript.js"></script>
+</body>
+</html>
