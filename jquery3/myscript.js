@@ -61,35 +61,34 @@ $(document).ready(function() {
                  var indexBrand = $(this).text().toLowerCase().indexOf(brand.toLowerCase());
                  var indexType = $(this).text().toLowerCase().indexOf(type.toLowerCase());
                  var indexGear = $(this).text().toLowerCase().indexOf(gear.toLowerCase());
-                 $(this).each(function(){
-                     if (indexBrand >= 0 && indexType >= 0 && indexGear >= 0){
-                         hitCntBrand++;
-                         hitCntType++;
-                         hitCntGear++;
-                     }
-                     else if (indexBrand >= 0 && indexType >= 0){
-                         hitCntBrand++;
-                         hitCntType++;
-                     }
-                     else if (indexBrand >= 0 && indexGear >= 0){
-                         hitCntBrand++;
-                         hitCntGear++;
-                     }
-                     else if (indexType >= 0 && indexGear >= 0){
-                         hitCntType++;
-                         hitCntGear++;
-                     }
-                     else if (indexBrand >= 0){
-                         hitCntBrand++;
-                     }
-                     else if (indexType >= 0){
-                         hitCntType++;
-                     }
-                     else if (indexGear >= 0){
-                         hitCntGear++;
-                     }
-                 });
-                 // alert("hitBrand:" + hitCntBrand + "hitType:" + hitCntType + "hitGear:" + hitCntGear);
+                 if (indexBrand >= 0 && indexType >= 0 && indexGear >= 0){
+                    hitCntBrand++;
+                    hitCntType++;
+                    hitCntGear++;
+                }
+                else if (indexBrand >= 0 && indexType >= 0){
+                    hitCntBrand++;
+                    hitCntType++;
+                }
+                else if (indexBrand >= 0 && indexGear >= 0){
+                    hitCntBrand++;
+                    hitCntGear++;
+                }
+                else if (indexType >= 0 && indexGear >= 0){
+                    hitCntType++;
+                    hitCntGear++;
+                }
+                else if (indexBrand >= 0){
+                    hitCntBrand++;
+                }
+                else if (indexType >= 0){
+                    hitCntType++;
+                }
+                else if (indexGear >= 0){
+                    hitCntGear++;
+                }
+                // alert("indexBrand:" + indexBrand + "indexType:" + indexType + "indexGear:" + indexGear);
+                //  alert("hitBrand:" + hitCntBrand + "hitType:" + hitCntType + "hitGear:" + hitCntGear);
          
                  if (hitCntBrand == 1 && hitCntType == 1 && hitCntGear == 1){
                      $(this).show();
@@ -112,9 +111,9 @@ $(document).ready(function() {
                  else if (hitCntBrand == 0 && hitCntType == 0 && hitCntGear == 1){
                      $(this).show();
                  }
-                //  else {
-                //      $(this).hide();
-                //  }
+                 else {
+                     $(this).hide();
+                 }
              });
          }
      }
